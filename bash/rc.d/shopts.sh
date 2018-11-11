@@ -8,8 +8,8 @@ shopt -s histappend
 HISTCONTROL=ignoreboth
 
 # Limit the size of command history.
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=16384
+HISTFILESIZE=32768
 
 # Autocorrect typos in path names when using `cd`.
 shopt -s cdspell
