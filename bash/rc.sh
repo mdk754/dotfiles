@@ -16,6 +16,6 @@ if [ -d "${__df_current_dir}/rc.d" ]; then
 fi
 
 # Keep this at the end.
-. "${__df_current_dir}/preexec.sh"
+. "${__df_current_dir}/lib/preexec.sh"
 
 unset __df_current_dir
