@@ -15,4 +15,7 @@ if [ -d "${__df_current_dir}/rc.d" ]; then
 	unset file
 fi
 
+# Keep this at the end.
+. "${__df_current_dir}/preexec.sh"
+
 unset __df_current_dir
