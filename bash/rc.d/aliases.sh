@@ -14,3 +14,14 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Intuitive map function
+# For example, to list all directories that contain a certain file:
+# find . -name .gitattributes | map dirname
+alias map='xargs -n1'
+
+# Reload the shell, add `-l` for login shell.
+alias reload='exec ${SHELL}'
+
+# Print each PATH entry on a separate line
+alias path='printf ${PATH//:/\\n}'
