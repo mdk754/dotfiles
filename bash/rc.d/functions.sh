@@ -35,3 +35,10 @@ tgz() {
 
 	printf "\n${__df_file}.gz ($((__df_size / 1024)) kB) created successfully.\n"
 }
+
+# Start an HTTP server from the current directory.
+http-server() {
+	local __df_port="${1:-8080}"
+
+	python -m SimpleHTTPServer ${__df_port}
+}
