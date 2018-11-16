@@ -10,8 +10,10 @@ set mark-symlinked-directories on
 # More intelligent Up/Down behavior.
 "\e[B": history-search-forward
 "\e[A": history-search-backward
-"\e[C": forward-char
-"\e[D": backward-char
+
+# History search seems to breaks these, this will reset them to work normally.
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
 
 # Do not autocomplete hidden files unless the pattern begins with a dot.
 set match-hidden-files off
