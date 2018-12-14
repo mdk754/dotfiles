@@ -40,6 +40,8 @@ bs-symlink() {
 
 	create-link "git/config" ".gitconfig"
 	create-link "git/ignore" ".gitignore"
+
+	create-link "fonts/" ".fonts"
 }
 
 bs-init() {
