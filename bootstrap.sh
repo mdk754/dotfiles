@@ -18,6 +18,17 @@ create-link() {
 	ln -s "${new_file}" "${target}"
 }
 
+copy-file() {
+	local target="${HOME}/${2}"
+	local backup_file="${backup_dir}/${2}"
+	local new_file="${current_dir}/${1}"
+
+	[ -h "${target}" ] && rm "${target}"
+	[ -f "${target}" ] && mv -i "${target}" "${backup_file}"
+
+	cp "${new_file}" "${target}"
+}
+
 bs-copy() {
 	return 0
 }
@@ -26,6 +37,9 @@ bs-symlink() {
 	create-link "bash/login.sh" ".bash_profile"
 	create-link "bash/rc.sh" ".bashrc"
 	create-link "bash/input.sh" ".inputrc"
+
+	create-link "git/config" ".gitconfig"
+	create-link "git/ignore" ".gitignore"
 }
 
 bs-init() {
